@@ -11,13 +11,14 @@ function App() {
 
       // Send email via backend
       try {
-        await fetch('https://your-backend-url/send-email', {
+        await fetch('https://secret-word-backend.onrender.com/validate', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({ input })
         });
+        setShowMessage(true);
       } catch (error) {
         console.error('Error sending email:', error);
       }
@@ -37,7 +38,8 @@ function App() {
     }}>
       {!showMessage &&
       <>
-      <h2>Enter the secret word:</h2>
+      <img src='/tuna.jpeg' style={{ width: '200px', marginBottom: '20px' }}></img>
+      <h2>What is my name?</h2>
       <input
         type="text"
         value={input}
