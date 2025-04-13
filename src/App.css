@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.letter-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  color: #333;
+  font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  white-space: pre-line;
+  text-align: left;
+}
+
