@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 function App() {
   const [input, setInput] = useState('');
   const [showMessage, setShowMessage] = useState(false);
+  const [alert, setAlert] = useState(false)
 
   const handleSubmit = async () => {
 
@@ -23,7 +24,7 @@ function App() {
         console.error('Error sending email:', error);
       }
     } else {
-      alert('Wrong input!');
+      setAlert(true);
     }
   };
 
@@ -46,7 +47,9 @@ function App() {
         onChange={(e) => setInput(e.target.value)}
         style={{ padding: '8px', marginBottom: '10px' }}
       />
-      
+      {
+        alert && <div style={{ padding: '8px', marginBottom: '10px' }}>Not my right name !</div>
+      }
       <button onClick={handleSubmit}>Submit</button>
       </>
       }
