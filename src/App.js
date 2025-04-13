@@ -6,7 +6,7 @@ function App() {
 
   const handleSubmit = async () => {
 
-    if (input === 'tuna') {
+    if (input === 'tuna' || input === 'Tuna') {
       setShowMessage(true);
 
       // Send email via backend
@@ -51,7 +51,7 @@ function App() {
       </>
       }
       {showMessage && <div className="letter-container">
-  <p>
+  <p style={{maxWidth:"400px"}}>
     Hi Mai,<br /><br />
     Thank you for taking the time to go through this puzzle. It truly means a lot to me.<br /><br />
 
