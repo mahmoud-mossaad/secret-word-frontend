@@ -7,7 +7,8 @@ function App() {
 
   const handleSubmit = async () => {
 
-    if (input === 'tuna' || input === 'Tuna') {
+    if (input === 'tuna' || input === 'Tuna' || input === "تونه" || input === "تونة"
+    ) {
       setShowMessage(true);
 
       // Send email via backend
